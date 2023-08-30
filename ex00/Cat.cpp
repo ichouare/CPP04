@@ -4,41 +4,30 @@
 Cat::Cat()
 {
     this->Type = "Cat";
-    CatBrain = new Brain();
     std::cout << "Constructors of Cat called" << std::endl;
 }
 
 Cat::Cat(std::string Type)
 {
     this->Type = Type;
-    CatBrain = new Brain();
      std::cout << " Parameterized Constructors of Cat called" << std::endl;
 }
 
 Cat::~Cat()
 {
     std::cout << "destructor of Cat called" << std::endl;
-     delete CatBrain;
 }
 
 Cat::Cat(const Cat& original)
 {
-    CatBrain = NULL;
-    std::cout << "copy constructor cat called" << std::endl;
     (*this) = original;
 }
 
 
 Cat& Cat::operator=(const Cat& obj)
 {
-    std::cout << "assignement operator Dog called" << std::endl;
-    if((this) == &obj)
-    return *(this);
     this->Type = obj.Type;
-    delete CatBrain;
-    CatBrain = new Brain(*obj.CatBrain);
     return (*this);
-
 }
 
 

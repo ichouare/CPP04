@@ -4,12 +4,12 @@ FLAG =  c++
 
 FLAGS =  -Wall -Wextra -Werror -std=c++98
  
-HEADER =  ./Brain.hpp ./Animal.hpp ./Cat.hpp ./Dog.hpp ./WrongAnimal.hpp ./WrongCat.hpp 
+HEADER = ./Animal.hpp /Cat.cpp ./Dog.hpp ./WrongAnimal.hpp ./WrongCat.hpp
 
-SRC = ./main.cpp ./Animal.cpp ./Cat.cpp  ./Dog.cpp ./WrongAnimal.cpp ./WrongCat.cpp    ./Brain.cpp
+SRC = ./main.cpp ./Animal.cpp ./Cat.cpp  ./Dog.cpp ./WrongAnimal.cpp ./WrongCat.cpp
 
 
-OBJ =  $(SRC:.cpp=.o)
+OBJ = $(SRC:.cpp=.o)
 
 all : $(NAME)
 

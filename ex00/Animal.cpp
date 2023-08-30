@@ -40,5 +40,6 @@ void Animal::setType(const std::string type)
 
 
 void Animal::makeSound() const
-{   
+{
+    // std::cout << "not sound to make" << std::endl;
 }

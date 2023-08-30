@@ -1,4 +1,5 @@
 #include "./Dog.hpp"
+#include "./Brain.hpp"
 
 
 Dog::Dog()
@@ -18,23 +19,31 @@ Dog::Dog(std::string Type)
 Dog::~Dog()
 {
     std::cout << "destructor of Dog called" << std::endl;
-    delete  DogBrain;
+   delete DogBrain;
 }
 
 Dog::Dog(const Dog& original)
 {
+    DogBrain = NULL;
+    std::cout << "copy constructor Dog called" << std::endl;
     (*this) = original;
 }
 
 
+
 Dog& Dog::operator=(const Dog& obj) 
 {
+    std::cout << "assignement operator Dog called" << std::endl;
+    if((this) == &obj)
+        return *(this);
     this->Type = obj.Type;
+    delete DogBrain;
+    DogBrain = new Brain(*obj.DogBrain);
     return (*this);
 }
 
 void Dog::makeSound() const
 {
-    std::cout << "bark" << std::endl;
+    std::cout << "Woof" << std::endl;
 }
 

@@ -1,12 +1,11 @@
-NAME = Animal
+NAME = game
 
 FLAG =  c++
 
 FLAGS =  -Wall -Wextra -Werror -std=c++98
  
-HEADER =  ./Brain.hpp ./Animal.hpp ./Cat.hpp ./Dog.hpp ./WrongAnimal.hpp ./WrongCat.hpp 
-
-SRC = ./main.cpp ./Animal.cpp ./Cat.cpp  ./Dog.cpp ./WrongAnimal.cpp ./WrongCat.cpp    ./Brain.cpp
+HEADER =  ./AMateria.hpp  ./Character.hpp ./Cure.hpp ./Ice.hpp ./ICharacter.hpp ./IMateriaSource.hpp ./MateriaSource.hpp 
+SRC = ./main.cpp  ./AMateria.cpp  ./Character.cpp ./Cure.cpp ./Ice.cpp ./MateriaSource.cpp 
 
 
 OBJ =  $(SRC:.cpp=.o)
