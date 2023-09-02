@@ -7,7 +7,7 @@
 class Dog : public Animal{
     public:
         Dog();
-        Dog(std::string Type);
+        Dog(std::string type);
         ~Dog();
         Dog (const Dog& original);
         Dog& operator=(const Dog& obj);

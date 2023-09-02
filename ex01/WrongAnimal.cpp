@@ -1,12 +1,12 @@
 #include "./WrongAnimal.hpp"
 
 
-WrongAnimal::WrongAnimal():Type("any_anamil")
+WrongAnimal::WrongAnimal():type("any_anamil")
 {
     std::cout << "default constructor  Wronganimal called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string Type):Type(Type)
+WrongAnimal::WrongAnimal(std::string type):type(type)
 {
     std::cout << "Parameterized  constructor  Wronganimal called" << std::endl;
 }
@@ -23,18 +23,18 @@ WrongAnimal::WrongAnimal(const WrongAnimal& originale)
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& obj)
 {
-    this->Type = obj.Type;
+    this->type = obj.type;
     return(*this);
 }
 
 std::string WrongAnimal::getType() const 
 {
-    return Type;
+    return type;
 }
 
 void WrongAnimal::setType(const std::string type)
 {
-    this->Type = type;
+    this->type = type;
 }
 
 

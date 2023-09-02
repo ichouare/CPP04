@@ -87,7 +87,7 @@ void Character::unequip(int idx)
 {
     if(idx >= 0 && idx <= 3)
     {
-       MateriaSource ptr;
+        MateriaSource ptr;
         ptr.learnMateria(m_inventery[idx]);
         m_inventery[idx] =  NULL;
         if(idx != 0)

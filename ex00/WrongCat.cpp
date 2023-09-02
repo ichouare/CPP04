@@ -3,7 +3,7 @@
 
 WrongCat::WrongCat()
 {
-    this->Type = "WrongCat";
+    this->type = "WrongCat";
      std::cout << "Constructors of WrongCat called" << std::endl;
 }
 
@@ -12,9 +12,9 @@ WrongCat::~WrongCat()
     std::cout << "destructor of WrongCat called" << std::endl;
 }
 
-WrongCat::WrongCat(std::string Type)
+WrongCat::WrongCat(std::string type)
 {
-    this->Type = Type;
+    this->type = type;
     std::cout << "Parameterized constrctor  of WrongCat called" << std::endl;
 }
 
@@ -26,7 +26,7 @@ WrongCat::WrongCat(const WrongCat& original)
 
 WrongCat& WrongCat::operator=(const WrongCat& obj)
 {
-    this->Type = obj.Type;
+    this->type = obj.type;
     return (*this);
 }
 

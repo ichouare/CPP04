@@ -1,12 +1,12 @@
 #include "./Animal.hpp"
 
 
-Animal::Animal():Type("any_anamil")
+Animal::Animal():type("any_anamil")
 {
     std::cout << "default constructor  animal called" << std::endl;
 }
 
-Animal::Animal(std::string Type):Type(Type)
+Animal::Animal(std::string type):type(type)
 {
     std::cout << "Parameterized  constructor  animal called" << std::endl;
 }
@@ -24,18 +24,18 @@ Animal::Animal(const Animal& originale)
 
 Animal& Animal::operator=(const Animal& obj)
 {
-    this->Type = obj.Type;
+    this->type = obj.type;
     return(*this);
 }
 
 std::string Animal::getType() const 
 {
-    return Type;
+    return type;
 }
 
 void Animal::setType(const std::string type)
 {
-    this->Type = type;
+    this->type = type;
 }
 
 

@@ -4,14 +4,14 @@
 
 Dog::Dog()
 {
-    this->Type = "dog";
+    this->type = "dog";
     DogBrain = new Brain();
      std::cout << "Constructors of Dog called" << std::endl;
 }
 
-Dog::Dog(std::string Type)
+Dog::Dog(std::string type)
 {
-    this->Type = Type;
+    this->type = type;
     DogBrain = new Brain();
     std::cout << " Parameterized Constructors of Dog called" << std::endl;
 }
@@ -36,7 +36,7 @@ Dog& Dog::operator=(const Dog& obj)
     std::cout << "assignement operator Dog called" << std::endl;
     if((this) == &obj)
         return *(this);
-    this->Type = obj.Type;
+    this->type = obj.type;
     delete DogBrain;
     DogBrain = new Brain(*obj.DogBrain);
     return (*this);

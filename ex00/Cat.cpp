@@ -3,13 +3,13 @@
 
 Cat::Cat()
 {
-    this->Type = "Cat";
+    this->type = "Cat";
     std::cout << "Constructors of Cat called" << std::endl;
 }
 
-Cat::Cat(std::string Type)
+Cat::Cat(std::string type)
 {
-    this->Type = Type;
+    this->type = type;
      std::cout << " Parameterized Constructors of Cat called" << std::endl;
 }
 
@@ -26,7 +26,7 @@ Cat::Cat(const Cat& original)
 
 Cat& Cat::operator=(const Cat& obj)
 {
-    this->Type = obj.Type;
+    this->type = obj.type;
     return (*this);
 }
 

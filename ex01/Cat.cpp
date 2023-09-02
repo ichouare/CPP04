@@ -3,14 +3,14 @@
 
 Cat::Cat()
 {
-    this->Type = "Cat";
+    this->type = "Cat";
     CatBrain = new Brain();
     std::cout << "Constructors of Cat called" << std::endl;
 }
 
-Cat::Cat(std::string Type)
+Cat::Cat(std::string type)
 {
-    this->Type = Type;
+    this->type = type;
     CatBrain = new Brain();
      std::cout << " Parameterized Constructors of Cat called" << std::endl;
 }
@@ -34,7 +34,7 @@ Cat& Cat::operator=(const Cat& obj)
     std::cout << "assignement operator Dog called" << std::endl;
     if((this) == &obj)
     return *(this);
-    this->Type = obj.Type;
+    this->type = obj.type;
     delete CatBrain;
     CatBrain = new Brain(*obj.CatBrain);
     return (*this);

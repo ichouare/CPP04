@@ -3,13 +3,13 @@
 
 Dog::Dog()
 {
-    this->Type = "dog";
+    this->type = "dog";
      std::cout << "Constructors of Dog called" << std::endl;
 }
 
-Dog::Dog(std::string Type)
+Dog::Dog(std::string type)
 {
-        this->Type = Type;
+        this->type = type;
      std::cout << " Parameterized Constructors of Dog called" << std::endl;
 }
 
@@ -26,7 +26,7 @@ Dog::Dog(const Dog& original)
 
 Dog& Dog::operator=(const Dog& obj) 
 {
-    this->Type = obj.Type;
+    this->type = obj.type;
     return (*this);
 }
 
